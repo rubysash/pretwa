@@ -154,24 +154,24 @@ def draw_board(surf,pulse1,pulse2,lw):
 	# update screen object with the lines
 	for xy in lines:
 		draw_lines(surf, pulse1,
-			lines[xy][0] * scale,
-			lines[xy][1] * scale,
-			lines[xy][2] * scale,
-			lines[xy][3] * scale,lw
+			int(lines[xy][0] * scale),
+			int(lines[xy][1] * scale),
+			int(lines[xy][2] * scale),
+			int(lines[xy][3] * scale),lw
 		)
 
 	for xy in circles:
 		pygame.draw.circle(surf, pulse1, (
-				circles[xy][0] * scale, 
-				circles[xy][1] * scale
+				int(circles[xy][0] * scale), 
+				int(circles[xy][1] * scale)
 				), 
-			circles[xy][2] * scale, lw
+			int(circles[xy][2] * scale), lw
 		)
 
 	for xy in dots:
 		pygame.draw.circle(surf, pulse2, (
-				dots[xy][0] * scale, 
-				dots[xy][1] * scale
+				int(dots[xy][0] * scale), 
+				int(dots[xy][1] * scale)
 				), 
 			10, 0
 		)
